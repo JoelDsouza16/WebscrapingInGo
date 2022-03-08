@@ -25,12 +25,15 @@ func main() {
 			el.ForEach("a.location_link", func(_ int, e2 *colly.HTMLElement) {
 				location = location + e2.Text + ","
 			})
+
 			fmt.Printf("\t\t Location - %v", location[:len(location)-1])
-			fmt.Printf("\n \tStipend - %v \n", el.ChildText("span.stipend"))
+			fmt.Printf("\n\tStipend - %v \n", el.ChildText("span.stipend"))
 			location = ""
 		})
 		fmt.Println("Scrapping Complete")
 	})
+
+	// Start Scraping
 	c.Visit("https://internshala.com/internships")
 	// time.Sleep(5 * time.Second)
 }
