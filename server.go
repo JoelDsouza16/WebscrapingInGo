@@ -62,7 +62,6 @@ func HelloServer(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Server Is Up")
 }
 func HelloInternshala(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("In HelloInternshala")
 	data := ScrapeInternshala()
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
