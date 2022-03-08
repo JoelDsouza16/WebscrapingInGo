@@ -2,19 +2,9 @@ package main
 
 import (
 	"fmt"
-	"time"
 
 	"github.com/gocolly/colly"
 )
-
-/*
-
-Command
->>> go build
-
-To create an exe
-
-*/
 
 func main() {
 
@@ -42,5 +32,5 @@ func main() {
 		fmt.Println("Scrapping Complete")
 	})
 	c.Visit("https://internshala.com/internships")
-	time.Sleep(5 * time.Second)
+	// time.Sleep(5 * time.Second)
 }
