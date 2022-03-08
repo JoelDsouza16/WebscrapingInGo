@@ -64,6 +64,6 @@ func HelloServer(w http.ResponseWriter, r *http.Request) {
 func HelloInternshala(w http.ResponseWriter, r *http.Request) {
 	data := ScrapeInternshala()
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusCreated)
+	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(data)
 }
